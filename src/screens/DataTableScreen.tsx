@@ -61,7 +61,7 @@ const DataTableScreen: React.FC = () => {
           </Text>
         </View>
       ) : (
-        <ScrollView horizontal showsHorizontalScrollIndicator>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
           <View>
             {renderHeader()}
             <FlatList
