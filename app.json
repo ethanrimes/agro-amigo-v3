@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Agro Amigo",
+    "slug": "agro-amigo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4CAF50"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.agroamigo.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4CAF50"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.agroamigo.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "pk.eyJ1IjoiZXRoYW5zYXN1cGVubiIsImEiOiJjbWljc2k4eGkwb2NkMmtwdWN4dmpkYmhjIn0.mlZ2a47lJVvs9N2QZZ0PlA"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "agro-amigo-v3"
+      }
+    }
+  }
+}
