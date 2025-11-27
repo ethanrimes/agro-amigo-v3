@@ -46,18 +46,18 @@ export const PriceTicker: React.FC<PriceTickerProps> = ({
 
   useEffect(() => {
     if (animated) {
-      // Subtle pulse animation
+      // Subtle pulse animation - using false to avoid conflicts with glow animation
       const pulse = Animated.loop(
         Animated.sequence([
           Animated.timing(pulseAnim, {
             toValue: 1.02,
             duration: 2000,
-            useNativeDriver: true,
+            useNativeDriver: false,
           }),
           Animated.timing(pulseAnim, {
             toValue: 1,
             duration: 2000,
-            useNativeDriver: true,
+            useNativeDriver: false,
           }),
         ])
       );
