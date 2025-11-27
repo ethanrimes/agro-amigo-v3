@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
-  FlatList,
+  ScrollView,
   Animated,
   Keyboard,
 } from 'react-native';
@@ -264,13 +264,17 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         )}
       </View>
       <Animated.View style={[styles.resultsContainer, { maxHeight: animatedHeight }]}>
-        <FlatList
-          data={results}
-          keyExtractor={(item) => `${item.tipo}-${item.id}`}
-          renderItem={renderResult}
+        <ScrollView
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}
-        />
+          nestedScrollEnabled={true}
+        >
+          {results.map((item) => (
+            <View key={`${item.tipo}-${item.id}`}>
+              {renderResult({ item })}
+            </View>
+          ))}
+        </ScrollView>
       </Animated.View>
     </View>
   );
