@@ -1,87 +1,50 @@
-# Agro Amigo
+# Welcome to your Expo app 👋
 
-Aplicación móvil para explorar datos de precios agrícolas e insumos de Colombia, utilizando información del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA) del DANE.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Características
+## Get started
 
-- **Exploración de precios**: Consulta precios de productos agrícolas, insumos y distritos de riego
-- **Análisis visual**: Gráficos interactivos con series de tiempo, histogramas y comparaciones
-- **Geovisor**: Mapa interactivo de Colombia con visualización de precios por departamento y mercado
-- **Búsqueda inteligente**: Búsqueda jerárquica (Categoría > Subcategoría > Producto > Presentación)
-- **Noticias del sector**: Últimas noticias agrícolas de fuentes oficiales
+1. Install dependencies
 
-## Stack Tecnológico
+   ```bash
+   npm install
+   ```
 
-- **Framework**: React Native + Expo
-- **Navegación**: React Navigation
-- **UI Components**: Gluestack UI v3
-- **Visualización**: D3.js + React Native SVG
-- **Mapas**: Mapbox (rnmapbox)
-- **Backend**: FastAPI (scaffold)
+2. Start the app
 
-## Estructura del Proyecto
+   ```bash
+   npx expo start
+   ```
 
-```
-src/
-├── components/       # Componentes reutilizables
-│   ├── charts/       # Gráficos (LineChart, BarChart, HistogramChart)
-│   ├── SearchBar.tsx
-│   ├── AppModal.tsx
-│   ├── PriceTicker.tsx
-│   └── ...
-├── screens/          # Pantallas principales
-│   ├── HomeScreen.tsx
-│   ├── AnalyzeScreen.tsx
-│   ├── GeovisorScreen.tsx
-│   └── SettingsScreen.tsx
-├── navigation/       # Configuración de navegación
-├── services/         # API y servicios
-├── data/            # Datos mock
-├── theme/           # Configuración de tema y estilos
-├── types/           # Definiciones de TypeScript
-└── hooks/           # Custom hooks
-```
+In the output, you'll find options to open the app in a
 
-## Instalación
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
 
 ```bash
-# Instalar dependencias
-npm install
-
-# Iniciar el servidor de desarrollo
-npx expo start
+npm run reset-project
 ```
 
-## Datos
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-La aplicación actualmente utiliza datos mock que simulan la estructura de SIPSA:
+## Learn more
 
-- **Productos Agrícolas**: Frutas, tubérculos, verduras, pescados
-- **Insumos Agrícolas**: Bioinsumos, fertilizantes, fungicidas, herbicidas
-- **Distritos de Riego**: Información de tarifas por hectárea
-- **Abastecimiento**: Datos de mercados mayoristas
+To learn more about developing your project with Expo, look at the following resources:
 
-## Jerarquía de Datos
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-### Productos
-- **Tipo**: Producto Agrícola, Insumo Agrícola, Distrito de Riego, Mercado Mayorista
-- **Categoría** > **Subcategoría** > **Producto** > **Presentación**
+## Join the community
 
-### Geografía
-- **Departamento** > **Municipio** > **Mercado**
+Join our community of developers creating universal apps.
 
-## Próximos Pasos
-
-- [ ] Conexión con backend FastAPI
-- [ ] Integración con Supabase
-- [ ] Implementación de autenticación
-- [ ] Notificaciones push
-- [ ] Modo offline
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT.
-
----
-
-Datos: DANE - SIPSA (Sistema de Información de Precios y Abastecimiento del Sector Agropecuario)
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
